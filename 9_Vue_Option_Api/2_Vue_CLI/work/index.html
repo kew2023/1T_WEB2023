@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <p>Кнопка была нажата {{ counter }} раз</p>
+        <button @click="counter++">Добавить</button>
+
+        <div>
+            <button @click="say('hello')">Say hello</button>
+            <button @click="say('what had happened?')">Say what</button>
+        </div>
+
+        <ul>
+            <li v-for="(item, index) in items"> {{ index }} : {{ item.id }} - {{ item.message }}</li>
+        </ul>
+
+        <div class="" :style="{'color': activeColor, 'fontSize': fontSize + 'px'}">
+            Hello 1T Sprint!
+        </div>
+
+        <input id="nick" value="Ник" v-model="checkedName">
+        <label for="nick">Ник</label>
+
+        <input id="" value="Ник" v-model="name"
+            @change="event => {checkedName.push(event.target.value); console.log(checkedName)}">
+
+        <br>
+
+        <select name="" id="" v-model="selected">
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <span>Выбрано: {{selected}}</span>
+    </div>
+
+
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
