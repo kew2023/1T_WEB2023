@@ -1,13 +1,22 @@
-// eslint-disable-next-line
+/* eslint-disable */
 import { createRouter, createWebHistory } from 'vue-router';
 
-/* eslint-disable */
+import vCatalog from '@/components/v-catalog.vue';
+import vCart from '@/components/v-cart.vue';
+
+
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: () => import(/* webpackChunkName: "home" */ '../components/v-main-wrapper.vue')
+    name: 'catalog',
+    component: vCatalog
+  },
+  {
+    path: '/cart',
+    name: 'cart',
+    component: vCart,
+    props: true
   }
 ];
 

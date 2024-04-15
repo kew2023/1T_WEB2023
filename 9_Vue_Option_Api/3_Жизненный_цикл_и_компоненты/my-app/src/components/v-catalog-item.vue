@@ -4,7 +4,7 @@
     <p class="v-catalog-item__name">{{ product_data.name }}</p>
     <p class="v-catalog-item__price">{{ product_data.price }}</p>
     <p class="v-catalog-item__about">{{ product_data.about }}</p>
-    <button class="v-catalog-item__btn" @click="addToCart">Add to cart</button>
+    <button class="v-catalog-item__btn btn" @click="addToCart">Add to cart</button>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ export default {
 <style>
   .v-catalog-item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
