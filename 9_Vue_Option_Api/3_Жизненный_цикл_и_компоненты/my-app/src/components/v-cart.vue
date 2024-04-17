@@ -13,11 +13,13 @@
 
     <h2>Cart!</h2>
 
-    <vCartItem v-for="(product, index) in CART"
+    <TransitionGroup name="cartAnim">
+      <vCartItem v-for="(product, index) in CART"
       :key="product.article"
       :cart_item_data="product"
       @deleteFromCart="() => deleteFromCart(index)"
     ></vCartItem>
+    </TransitionGroup>
   </div>
 </template>
 
@@ -58,5 +60,16 @@ export default {
   }
   p{
     text-align: center;
+  }
+
+  .cartAnim-enter-active, .cartAnim-leave-active {
+    transition: all 0.5s ease;
+  }
+  .cartAnim-enter-from, .cartAnim-leave-to {
+    opacity: 0;
+  }
+
+  .cartAnim-leave-to{
+    transform: translateX(-100%);
   }
 </style>
