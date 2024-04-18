@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bulma": "^1.0.0",
+    "uuid": "^9.0.1",
     "vue": "^3.4.21"
   },
   "devDependencies": {
